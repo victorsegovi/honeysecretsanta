@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ECBBEC;
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: hsla(0, 0%, 12%, 1);
+    position: relative;
+}
+
+main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.bg-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    text-shadow: 1px 2px 4px hsla(0, 0%, 100%, 0.65);
+    font-family: 'Dancing Script', sans-serif;
+    font-size: clamp(2rem, 6rem, 10rem);
+}
+
+.to-my-favorite{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    width: 100%;
+    text-align: center;
+}
+
+p{
+    font-size: clamp(.5rem, 1.5rem, 2.5rem);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+span{
+    font-size: clamp(2rem, 3rem, 4rem);
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: 700;
+}
+
+.vectors{
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    margin-top: 140px;
+}
+
+.vectors img{
+    margin: 0 -16px;
+}
+
+.from{
+    text-align: center;
+    margin-top: 120px;
+}
+
+.from p{
+    color: #fff;
+}
+
+.starfire-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    margin: 120px 16px;
+}
+
+.starfire-container img{
+    position: absolute;
+}
+
+.starfire-container img:first-child{
+    top: 0;
+    animation: first-ball 5s infinite linear;
+}
+
+.starfire-container img:nth-child(2){
+    left: 0;
+    bottom: 0;
+    animation: second-ball 5s infinite linear;
+}
+
+.starfire-container img:nth-child(3){
+    right: 0;
+    bottom: 0;
+    animation: third-ball 5s infinite linear
+}
+
+@keyframes first-ball {
+    0%{
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: hue-rotate(0);
+    }
+
+    25%{
+        top: 100%;
+    }
+
+    50%{
+        top: 0;
+        left: 0;
+        transform: unset;
+        filter: hue-rotate(45deg);
+    }
+
+    75%{
+        top: 100%;
+        left: 100%;
+        transform: translate(-200%);
+    }
+
+    100%{
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: hue-rotate(0);
+    }
+}
+
+@keyframes second-ball {
+    0%{
+        bottom: 0;
+        left: 0;
+        filter: hue-rotate(0);
+    }
+
+    25%{
+        bottom: 100%;
+        left: 100%;
+        transform: translate(-100%);
+    }
+
+    50%{
+        bottom: 0;
+        left: 50%;
+        transform: unset;
+        transform: translateX(-50%);
+        filter: hue-rotate(45deg);
+    }
+
+    75%{
+        bottom: 50%;
+        left: 50%;
+    }
+
+    100%{
+        bottom: 0;
+        left: 0;
+        filter: hue-rotate(0);
+    }
+}
+
+@keyframes third-ball {
+    0%{
+        right: 0;
+        bottom: 0;
+        filter: hue-rotate(0);
+    }
+
+    25%{
+        bottom: 100%;
+        right: 100%;
+        transform: translate(100%);
+    }
+
+    50%{
+        bottom: 50%;
+        right: 0;
+        transform: unset;
+        transform: translateX(-50%);
+        transform: translateY(50%);
+        filter: hue-rotate(45deg);
+    }
+
+    75%{
+        bottom: 75%;
+        right: 100%;
+    }
+
+    100%{
+        right: 0;
+        bottom: 0;
+        transform: unset;
+        filter: hue-rotate(0);
+    }
+}
+
+.starfire{
+    width: 112px;
+    position: fixed;
+}
+
+.footer{
+    text-align: center;
+}
+
+.whatever-this-is{
+    width: 100%;
+    height: 200px;
+    background: conic-gradient(from 238.72deg at 40.21% 57.69%, #ECBBEC 0deg, #340E34 360deg);
+    border-radius: 0px 600px 0px 0px;
+    position: relative;
+    margin-top: 160px;
+}
+
+.whatever-this-is img{
+    width: 40%;
+    max-width: 200px;
+    position: absolute;
+    top: -50%;
+    right: 0;
+}
